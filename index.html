@@ -11,25 +11,25 @@
     <div class="" id="shopping-list">
       <h1>{{header || 'No header provided'}}</h1>
       <ul>
-        <li v-for="(item, index) in items" :key="item.id">
-          {{index+1}}. {{item.label}}
+        <li v-for="item in items" :key="item.id">
+          {{item.label}}
         </li>
       </ul>
     </div>
     <script src="https://unpkg.com/vue@3"></script>
     <script>
-      Vue.createApp({
+      const shoppingListApp = Vue.createApp({
         data() {
           return {
-            header: "Mi lista de compras",
+            header: 'Mi lista de compras',
             items: [
-              { id: "1", label: "10 sombreros de fiesta" },
-              { id: "2", label: "2 kg de aguacate" },
-              { id: "3", label: "1 lata de frijoles" }
+              { id: '1', label: '10 sombreros de fiesta' },
+              { id: '2', label: '2 kg de aguacate' },
+              { id: '3', label: '1 lata de frijoles' }
             ]
           };
         }
-      }).mount("#shopping-list");
+      }).mount('#shopping-list');
     </script>
   </body>
 </html>
