@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="" id="shopping-list">
-      <h1>{{header}}</h1>
+      <h1>{{header || 'No header provided'}}</h1>
       <input type="text" v-model="header" />
     </div>
     <script src="https://unpkg.com/vue@3"></script>
@@ -17,7 +17,7 @@
       Vue.createApp({
         data() {
           return {
-            header: "Vue Ready!"
+            header: null
           };
         }
       }).mount("#shopping-list");
